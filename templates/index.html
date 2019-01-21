@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+<div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
     var myChart = echarts.init(document.getElementById('main'));
 
@@ -42,7 +42,7 @@
 
     //准备好统一的 callback 函数
     var update_mychart = function (res) {
-    //res是json格式的response对象
+        //res是json格式的response对象
 
         // 隐藏加载动画
         myChart.hideLoading();
@@ -83,6 +83,50 @@
 
     });
 
-    </script>
+</script>
+<div style="height:500px;border:1px solid #ccc;padding:10px;">
+    <table border="" cellspacing="" cellpadding="" width="500px" align="center">
+        <caption><b>人员名单</b></caption>
+        <tr>
+            <td ></td>
+            <td >姓名</td>
+            <td >专业</td>
+            <td>Data</td>
+        </tr>
+
+        <tbody>
+        <tr>
+            <th rowspan="2"> 数学专业 </th>
+            <td>小明</td>
+            <td>男</td>
+            <td>{{ data }}</td>
+        </tr>
+        <tr>
+            <td>小红</td>
+            <td>女</td>
+            <td>{{ data }}</td>
+        </tr>
+        </tbody>
+
+        <tbody>
+        <tr>
+            <th rowspan="2"> 数学专业 </th>
+            <td>小明</td>
+            <td>男</td>
+            <td>{{ data }}</td>
+        </tr>
+        <tr>
+            <td>小红</td>
+            <td>女</td>
+            <td>{{ data }}</td>
+        </tr>
+        </tbody>
+
+        <tr>
+            <td colspan="3"  style="text-align: right;"> 总人数 ：4人  </td>
+        </tr>
+    </table>
+
+</div>
 </body>
 </html>
